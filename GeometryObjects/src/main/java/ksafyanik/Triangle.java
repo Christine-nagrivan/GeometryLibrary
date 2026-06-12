@@ -1,6 +1,6 @@
-package ksafyanik.GeometryLibrary;
+package ksafyanik;
 
-public class Triangle {
+public class Triangle extends MyShape {
     private final double a;
     private final double b;
     private final double c;
@@ -11,10 +11,25 @@ public class Triangle {
         this.c = c;
     }
 
+    public double getA() {
+        return a;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public double getC() {
+        return c;
+    }
+
+    @Override
     public double square() {
         double halfPerimeter = this.perimeter() / 2;
         return Math.sqrt(halfPerimeter * (halfPerimeter - this.a) * (halfPerimeter * this.b) * (halfPerimeter * this.c));
     }
+
+    @Override
     public double perimeter() {
         return this.a + this.b + this.c;
     }
