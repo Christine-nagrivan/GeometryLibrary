@@ -11,18 +11,6 @@ public class Triangle extends MyShape {
         this.c = c;
     }
 
-    public double getA() {
-        return a;
-    }
-
-    public double getB() {
-        return b;
-    }
-
-    public double getC() {
-        return c;
-    }
-
     @Override
     public double square() {
         double halfPerimeter = this.perimeter() / 2;
